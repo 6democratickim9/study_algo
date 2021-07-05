@@ -1,16 +1,13 @@
+import math
 def solution(progresses, speeds):
     days = []
     answer = []
     
     for idx in range(len(progresses)):
-        days.append((100-progresses[idx])/speeds[idx])
+        days.append(math.ceil((100-progresses[idx])/speeds[idx]))
     days.reverse()
 
-##내가 구현하고 싶은 내용
-# 맨 앞의 인덱스를 저장해두고, 맨 앞의 인덱스보다 큰 값이 나타나면 
-# 해당 값이 나타난 인덱스를 전체 길이에-1 해서 뺀 다음 
-# 그 값만큼 돌린다.
-# 만약 맨 앞의 인덱스가 제일 크면 해당 리스트의 길이만큼 저장
+
     per=len(days)
     while per>0:
         if len(days)==0:
@@ -18,6 +15,10 @@ def solution(progresses, speeds):
         per=len(days)
         front=days[len(days)-1]
         if front==max(days):
+            answer.append(len(days))
+            for roll in range(len(days)):
+                days.pop()
+        elif front==days[0]:
             answer.append(len(days))
             for roll in range(len(days)):
                 days.pop()
@@ -55,7 +56,11 @@ def solution(progresses, speeds):
     #                 cnt+=1
 
     # return answer
-
+##내가 구현하고 싶은 내용
+# 맨 앞의 인덱스를 저장해두고, 맨 앞의 인덱스보다 큰 값이 나타나면 
+# 해당 값이 나타난 인덱스를 전체 길이에-1 해서 뺀 다음 
+# 그 값만큼 돌린다.
+# 만약 맨 앞의 인덱스가 제일 크면 해당 리스트의 길이만큼 저장
 
 print(solution([95, 90, 99, 99, 80, 99], [1, 1, 1, 1, 1, 1]))
 print(solution([93, 30, 55],[1, 30, 5]))
