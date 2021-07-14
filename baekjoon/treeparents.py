@@ -2,9 +2,8 @@
 # start_time=time.time()
 import sys
 insert= int(sys.stdin.readline())
-sys.setrecursionlimit(10**9)
 tree=[]
-for input in range(0,insert-1):
+for input in range(insert-1):
     tree.append(list(map(int,sys.stdin.readline().split())))
 for node in range(2,insert+1):
     for idx in range(0,len(tree)):
