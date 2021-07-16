@@ -24,3 +24,7 @@
 # print(sumDivisor(12))
 # a=[123]
 # print(a[0][1])
+# print(int("a")==int(10))
+# import string
+# print(chr(ord('a')+1))
+print(26%25)
