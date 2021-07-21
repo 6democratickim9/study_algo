@@ -27,10 +27,5 @@
 # print(int("a")==int(10))
 # import string
 # print(chr(ord('a')+1))
-n=10
-num=set(range(2,n+1))
-
-for i in range(2,n+1):
-    if i in num:
-        for b in range(2*i,n+1,i):
-            print (i)
+i=[1,2,3,4]
+print(i[1:])
