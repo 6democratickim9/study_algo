@@ -1,31 +1,7 @@
-# import collections
-# from typing import Counter
+a=["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"]
 
-# print(Counter('helloworld').most_common(3))
-# b=10
-# cnt=0
-# while b:
-#     print('a')
-#     if cnt==0:
-#         print('skdfhsdkjf')
-#     elif cnt>=1:
-#         print('dhfkjsf')
-#     cnt+=1
+print((a[1].split())[1])
 
-# b= [[1,2],[3,4]]
-# # b=[1,2]
-# # if 1 in b[0][0]:
-# #     print(1)
-# print(b[0][0])
-# def sumDivisor(num):
-#     return sum(list(filter(lambda i: not num % i, range(1, num + 1))))
-    # 필터를 거친 리스트를 sum 으로 반환한다
-    # 필터는 람다의 i가 1,num+1 까지 돌면서 num%1가 True가 아닌 것을 거른다.
-# print(sumDivisor(12))
-# a=[123]
-# print(a[0][1])
-# print(int("a")==int(10))
-# import string
-# print(chr(ord('a')+1))
-i=[1,2,3,4]
-print(i[1:])
+dic={"uid34":"Musi"}
+dic["uid34"]=1
+print(dic)
