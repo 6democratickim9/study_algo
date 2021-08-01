@@ -1,11 +1,12 @@
 def solution(arr):
     answer = []
-    for a in range(len(arr)):
-        tmp = arr[0]
-        answer.append(tmp)
-        if len(arr)==arr.count(tmp):
-            return answer
-        for _ in range(arr.count(tmp)):
-            if arr[0] != tmp :
-                break
-            (arr.pop(arr.index(tmp)))
+    answer.append(arr[0])
+    i=0
+    for i in range(len(arr)):
+        if arr[i]!=int(answer[-1]):
+            print(arr[i],answer[-1])
+            answer.append(arr[i])
+
+    return answer
+
+print(solution([1,1,3,3,0,1,1]))
