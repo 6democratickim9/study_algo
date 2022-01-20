@@ -32,12 +32,14 @@
 #             break
 
 # print(len(result))
+
 N, M = map(int, input().split())
 cnt = 0
 if N < 3:
     print(cnt)
 else:
     unmixed = {i: [] for i in range(1, N+1)}
+    # 딕셔너리로 조합 하면 안되는 값 저장
     for _ in range(M):
         i, j = map(int, input().split())
         unmixed[i].append(j)
